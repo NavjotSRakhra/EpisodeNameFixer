@@ -1,5 +1,6 @@
 package io.github.navjotsrakhra;
 
+import io.github.navjotsrakhra.cli.Usage;
 import io.github.navjotsrakhra.cli.Validator;
 import io.github.navjotsrakhra.util.EpisodeNameComparator;
 import io.github.navjotsrakhra.util.FileNameAppender;
@@ -15,6 +16,7 @@ import java.util.Objects;
  */
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println(Usage.USAGE.getValue());
         Validator.validateArguments(args);
 
         File seasonDir = new File(args[0]);
@@ -22,7 +24,7 @@ public class App {
         Formatter formatter = new Formatter();
         int episodeNumber = 1;
 
-        FileWithExtension[] files = Arrays.stream(Objects.requireNonNull(seasonDir.listFiles())).sorted(new EpisodeNameComparator()).toArray(FileWithExtension[]::new);
+        FileWithExtension[] files = Arrays.stream(Objects.requireNonNull(seasonDir.listFiles())).sorted(new EpisodeNameComparator()).map(FileWithExtension::new).toArray(FileWithExtension[]::new);
         for (FileWithExtension file : files) {
             String seasonAndEpisodeString = formatter.formatSeasonAndEpisodeString(seasonNumber, episodeNumber);
             episodeNumber += 1;

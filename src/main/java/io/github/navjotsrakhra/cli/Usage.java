@@ -10,28 +10,28 @@ public enum Usage {
                 - <season_number>: This is the season number of the episodes in the specified directory. For example, if you want to rename the episodes for Season 2, you would enter 2. Please enter just the number, without any extra characters.
             
             Episode Naming Format (SXXEYY):
-                        
+            
             SXX: This represents the season number.
             For example, if you specify 2, the format will include S02.
             EYY: This represents the episode number within that season.
             For example, if the first episode is being renamed, it will appear as E01, the second as E02, and so on.
             
             Example:
-                        
+            
             If your episode files are located in C:\\TV Shows\\MyShow\\Season 2 and you want to fix the names for Season 2, you would run:
-                        
+            
             arduino
             Copy code
             EpisodeNameFixer "C:\\TV Shows\\MyShow\\Season 2" 2
             This command will rename your files to look like:
-                        
+            
             S02E01 - Episode Title
             S02E02 - Episode Title
             S02E03 - Episode Title
             And so forth, in order, according to the episode's sequence.
             
             Important Notes:
-                        
+            
             Ensure that your episode files are named in a consistent manner (like using titles or numbers) so the tool can identify and rename them correctly.
             It’s advisable to back up your files before running this tool, just in case something doesn’t go as planned.
             The tool will automatically rename your files in the SXXEYY format, where XX is the season number you provided, and YY is the episode number assigned in order.

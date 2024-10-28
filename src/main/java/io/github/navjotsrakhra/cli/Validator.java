@@ -10,7 +10,7 @@ public class Validator {
         List<Exception> exceptionsThrown = new ArrayList<>();
 
         if (args.length != 2) {
-            System.out.println(Usage.HELP_TEXT);
+            System.out.println(Usage.HELP_TEXT.getValue());
             throw new Exception("You did not enter 2 arguements");
         }
 
@@ -20,7 +20,7 @@ public class Validator {
             exceptionsThrown.add(e);
         }
         try {
-            validateFileIsADirectory(new File(args[1]));
+            validateIsIntegral(args[1]);
         } catch (Exception e) {
             exceptionsThrown.add(e);
         }
