@@ -20,8 +20,6 @@ public enum Usage {
             
             If your episode files are located in C:\\TV Shows\\MyShow\\Season 2 and you want to fix the names for Season 2, you would run:
             
-            arduino
-            Copy code
             EpisodeNameFixer "C:\\TV Shows\\MyShow\\Season 2" 2
             This command will rename your files to look like:
             
@@ -33,7 +31,7 @@ public enum Usage {
             Important Notes:
             
             Ensure that your episode files are named in a consistent manner (like using titles or numbers) so the tool can identify and rename them correctly.
-            It’s advisable to back up your files before running this tool, just in case something doesn’t go as planned.
+            It's advisable to back up your files before running this tool, just in case something doesn’t go as planned.
             The tool will automatically rename your files in the SXXEYY format, where XX is the season number you provided, and YY is the episode number assigned in order.
             """),
     USAGE("""
