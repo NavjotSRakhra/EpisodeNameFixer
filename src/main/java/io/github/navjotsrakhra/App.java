@@ -32,7 +32,7 @@ public class App {
             String newFileName = FileNameAppender.appendToFileName(file, seasonAndEpisodeString);
             String oldFileName = file.getAbsolutePath();
 
-            if (file.renameTo(new File(oldFileName))) {
+            if (file.renameTo(new File(newFileName))) {
                 // Rename successful
                 System.out.println("Renaming " + oldFileName + " to " + newFileName + " was successful");
             } else {
