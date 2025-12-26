@@ -54,6 +54,7 @@ is the episode number assigned in order.
 ## Requirements to run
 
 - Windows 10/11 (Executable Tested on Windows 11)
+- Linux executable provided in releases or you can build your own using GraalVM for more information on building it refer to the next subheading. (Executable tested on Ubuntu 25 LTS)
 - Linux / macOS (Jar file can run on any OS with a JRE 21)
 
 ## Requirements to build
